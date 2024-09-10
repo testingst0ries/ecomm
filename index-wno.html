@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasons Clothing Co.</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script>
+      window.name = '';
+      console.log('window.name is overriden');
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accHolder = document.querySelector("#acc");
+        if (accHolder) {
+          acc.innerText = `(${getAcount()})`;
+        }
+      });
+      function getAcount() {
+        var account_id = '606908';
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        if (params.ac) { account_id = params.ac; }
+        return account_id;
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type='text/javascript' id='vwoCode'>
+      window._vwo_code = window._vwo_code || (function () {
+        var account_id = getAcount(),
+          version = 1.5,
+          settings_tolerance = 2000,
+          library_tolerance = 2500,
+          use_existing_jquery = false,
+          is_spa = 1,
+          hide_element = 'body',
+          hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+          /* DO NOT EDIT BELOW THIS LINE */
+          f = false, w = window, d = document, vwoCodeEl = d.querySelector('#vwoCode'), code = { use_existing_jquery: function () { return use_existing_jquery }, library_tolerance: function () { return library_tolerance }, hide_element_style: function () { return '{' + hide_element_style + '}' }, finish: function () { if (!f) { f = true; var e = d.getElementById('_vis_opt_path_hides'); if (e) e.parentNode.removeChild(e) } }, finished: function () { return f }, load: function (e) { var t = d.createElement('script'); t.fetchPriority = 'high'; t.src = e; t.type = 'text/javascript'; t.onerror = function () { _vwo_code.finish() }; d.getElementsByTagName('head')[0].appendChild(t) }, getVersion: function () { return version }, getMatchedCookies: function (e) { var t = []; if (document.cookie) { t = document.cookie.match(e) || [] } return t }, getCombinationCookie: function () { var e = code.getMatchedCookies(/(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi); e = e.map(function (e) { try { var t = decodeURIComponent(e); if (!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)) { return '' } return t } catch (e) { return '' } }); var i = []; e.forEach(function (e) { var t = e.match(/([\d,]+)/g); t && i.push(t.join('-')) }); return i.join('|') }, init: function () { if (d.URL.indexOf('__vwo_disable__') > -1) return; w.settings_timer = setTimeout(function () { _vwo_code.finish() }, settings_tolerance); var e = d.currentScript, t = d.createElement('style'), i = e && !e.async ? hide_element ? hide_element + '{' + hide_element_style + '}' : '' : code.lA = 1, n = d.getElementsByTagName('head')[0]; t.setAttribute('id', '_vis_opt_path_hides'); vwoCodeEl && t.setAttribute('nonce', vwoCodeEl.nonce); t.setAttribute('type', 'text/css'); if (t.styleSheet) t.styleSheet.cssText = i; else t.appendChild(d.createTextNode(i)); n.appendChild(t); var o = this.getCombinationCookie(); this.load('https://dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + +is_spa + '&vn=' + version + (o ? '&c=' + o : '')); return settings_timer } }; w._vwo_settings_timer = code.init(); return code;
+      }());
+    </script>
+  </head>
+  <body>
+    <!--Nav bar-->
+    <section class="head-section">
+      <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light penguin-nabbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="150" height="100">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                    <stop offset="25%" style="stop-color:#33cc33;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#3399ff;stop-opacity:1" />
+                    <stop offset="75%" style="stop-color:#ff3399;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                
+                <circle cx="150" cy="100" r="80" fill="url(#grad1)" />
+                
+                <text x="150" y="105" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">Seasons</text>
+                <text x="150" y="130" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Clothing Co</text>
+              </svg>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B"
+                    class="nav-link">
+                    <span id="acc"></span>
+                    <span style="transform: scale(1.5) rotate(-6deg);display: inline-block;margin-left: 10px;color: #f11c547d;font-family: math;">↹</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-us">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact-us">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <main>
+      <!--Banner section-->
+      <section class="head-section">
+        <div class="pt-2 pb-5 container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6 px-3">
+              <h1 id="text-style">Buy the Sweaters</h1>
+              <h1 class="text-style2">for Every Season</h1>
+              <p>
+                Seasons Clothing Co. is back with latest styles for all seasons. Find
+                the sweaters and jackets of your choice and get 25% discount. Offer valid for 5 days only.
+              </p>
+              <button type="button" class="btn penguin-btn">
+                <i class="fa fa-shopping-cart"></i> BUY NOW
+              </button>
+            </div>
+            <div class="col-md-6 how-img px-5">
+              <img src="Images/bannar-profile.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Woman collection section-->
+      <section id="products" class="container mt-5">
+        <h1>Woman Jacket</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak1.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yellow Coat Jacket</h5>
+                <p class="card-text">
+                  Stylish yellow coat for young and beautiful ladies.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3200Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak2.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ladies Jacket</h5>
+                <p class="card-text">
+                  Jackets for casual wear in best prices and diffrent color
+                  patterns.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">2500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak3.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Woman Leather Jacket</h5>
+                <p class="card-text">
+                  Leather jackets of premium quality.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">5000Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Men collection section-->
+      <section class="container mt-5">
+        <h1 class="penguin-catagory">Woman Jacket</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak1.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Snowboard Jacket Mens</h5>
+                <p class="card-text">
+                  Snowboard jacket are ferfect match for people in moutain areas
+                  or for tourist.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak3.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Man Leather Jackets</h5>
+                <p class="card-text">
+                  Perfect bike riding jacket available with different color and
+                  sizes.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">4500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak2.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Man Casual Jackets</h5>
+                <p class="card-text">
+                  Matte Black Jacket with all sizes available.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3000Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Some information section-->
+      <section class="container mt-5 pt-5">
+        <div class="pt-2 pb-5 container">
+          <div
+            class="row d-flex align-items-center flex-column-reverse flex-lg-row"
+          >
+            <div class="col-md-6 px-3">
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 12.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Find the Perfect Fit</h5>
+                      <p class="card-text">
+                        Everybody is different, which is why we offer styles for
+                        every body.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 13.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Free Exchanges</h5>
+                      <p class="card-text">
+                        One of the many reasons you can shop with peace of mind.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 14.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Contact Our Seller</h5>
+                      <p class="card-text">
+                        They are here to help you. That's quite literally what
+                        we pay them for.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 how-img px-5">
+              <img src="icon/XMLID 1.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer section-->
+    <section class="footer-section">
+      <div class="container pb-5">
+        <div class="row">
+          <div id="about-us" class="col-sm pe-5 pt-3">
+            <h5 class="mb-3">Seasons Clothing Co</h5>
+            <p>
+              Changing the way you dress will change the way you feel. When you
+              are well dressed and look good you will automatically feel better.
+              When you feel good about yourself, you are more likely to feel
+              good inside, treat others better, and have more energy.
+            </p>
+          </div>
+          <div id="contact-us" class="col-sm pe-5 pt-3">
+            <h5>Contact us:</h5>
+            <hr />
+            <p>
+              <i class="fa fa-map-marker fa-1x"> </i>123 Fashion Avenue, Styleville, 12345
+            </p>
+            <p>
+              <i class="fa fa-envelope-open"></i>
+              info@seasonsclothing.com
+            </p>
+            <p><i class="fa fa-phone"></i> +1 (555) 987-6543</p>
+          </div>
+          <div class="col-sm pe-5 pt-3">
+            <div>
+              <h5>Get in Touch</h5>
+              <hr />
+              <i class="fa fa-facebook-square fa-2x pe-3"> </i>
+              <i class="fa fa-twitter-square fa-2x pe-3"></i>
+              <i class="fa fa-linkedin fa-2x pe-3"></i>
+            </div>
+            <div class="pt-5">
+              <h5>Pay with</h5>
+              <hr />
+              <img src="icon/pay.png" class="w-75" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p class="text-center">
+          © Seasons Clothing Co. 2023, all rights reserved
+        </p>
+      </footer>
+    </section>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

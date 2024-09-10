@@ -15,6 +15,38 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accHolder = document.querySelector("#acc");
+        if (accHolder) {
+          acc.innerText = `(${getAcount()})`;
+        }
+      });
+      function getAcount() {
+        var account_id = '606908';
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        if (params.ac) { account_id = params.ac; }
+        return account_id;
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type='text/javascript' id='vwoCode'>
+      window._vwo_code = window._vwo_code || (function () {
+        var account_id = getAcount(),
+          version = 1.5,
+          settings_tolerance = 2000,
+          library_tolerance = 2500,
+          use_existing_jquery = false,
+          is_spa = 1,
+          hide_element = 'body',
+          hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+          /* DO NOT EDIT BELOW THIS LINE */
+          f = false, w = window, d = document, vwoCodeEl = d.querySelector('#vwoCode'), code = { use_existing_jquery: function () { return use_existing_jquery }, library_tolerance: function () { return library_tolerance }, hide_element_style: function () { return '{' + hide_element_style + '}' }, finish: function () { if (!f) { f = true; var e = d.getElementById('_vis_opt_path_hides'); if (e) e.parentNode.removeChild(e) } }, finished: function () { return f }, load: function (e) { var t = d.createElement('script'); t.fetchPriority = 'high'; t.src = e; t.type = 'text/javascript'; t.onerror = function () { _vwo_code.finish() }; d.getElementsByTagName('head')[0].appendChild(t) }, getVersion: function () { return version }, getMatchedCookies: function (e) { var t = []; if (document.cookie) { t = document.cookie.match(e) || [] } return t }, getCombinationCookie: function () { var e = code.getMatchedCookies(/(?:^|;)\s?(_vis_opt_exp_\d+_combi=[^;$]*)/gi); e = e.map(function (e) { try { var t = decodeURIComponent(e); if (!/_vis_opt_exp_\d+_combi=(?:\d+,?)+\s*$/.test(t)) { return '' } return t } catch (e) { return '' } }); var i = []; e.forEach(function (e) { var t = e.match(/([\d,]+)/g); t && i.push(t.join('-')) }); return i.join('|') }, init: function () { if (d.URL.indexOf('__vwo_disable__') > -1) return; w.settings_timer = setTimeout(function () { _vwo_code.finish() }, settings_tolerance); var e = d.currentScript, t = d.createElement('style'), i = e && !e.async ? hide_element ? hide_element + '{' + hide_element_style + '}' : '' : code.lA = 1, n = d.getElementsByTagName('head')[0]; t.setAttribute('id', '_vis_opt_path_hides'); vwoCodeEl && t.setAttribute('nonce', vwoCodeEl.nonce); t.setAttribute('type', 'text/css'); if (t.styleSheet) t.styleSheet.cssText = i; else t.appendChild(d.createTextNode(i)); n.appendChild(t); var o = this.getCombinationCookie(); this.load('https://dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + +is_spa + '&vn=' + version + (o ? '&c=' + o : '')); return settings_timer } }; w._vwo_settings_timer = code.init(); return code;
+      }());
+    </script>
   </head>
   <body>
     <!--Nav bar-->
@@ -56,6 +88,13 @@
               id="navbarNav"
             >
               <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B"
+                    class="nav-link">
+                    <span id="acc"></span>
+                    <span style="transform: scale(1.5) rotate(-6deg);display: inline-block;margin-left: 10px;color: #f11c547d;font-family: math;">↹</span>
+                  </a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
                     >Home</a

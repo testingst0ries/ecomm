@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Christmas Wishlist</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1A5F7A;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            background-image: linear-gradient(to bottom, #083b4c, #116d8e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 700px;
+            border: 3px solid #DC143C;
+            box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+            width: 90%;
+        }
+        h1 {
+            color: #DC143C;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .message {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #F0F0F0;
+            margin-bottom: 20px;
+        }
+        .selection-note {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #FFD700;
+            border: 2px dashed #DC143C;
+        }
+        .wishlist-links {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .wishlist-links h2 {
+            color: #DC143C;
+            margin-bottom: 15px;
+        }
+        #linksList {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        #linksList li {
+            background-color: rgba(255,255,255,0.1);
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #linksList li a {
+            color: #F0F0F0;
+            text-decoration: none;
+            word-break: break-all;
+            transition: color 0.3s ease;
+        }
+        #linksList li a:hover {
+            color: #DC143C;
+            text-decoration: underline;
+        }
+        #snowfall {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .snowflake {
+            position: absolute;
+            color: #ffffff;
+            font-size: 10px;
+            user-select: none;
+            opacity: 0.7;
+            z-index: 2;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="snowfall"></div>
+    <div class="container">
+        <h1>🎄 My Wishful Holiday Shopping List 🎁</h1>
+        <div class="message">
+            <p>
+                This page contains a few online shopping items that I've been wishing for. 
+                If you want to gift me, please feel free to choose any of these. 
+                I am truly grateful to you in advance. 
+            </p>
+            <p>
+                May your own Santa fulfill your wishes, 
+                and may you achieve lifetime happiness. 🎅
+            </p>
+        </div>
+
+        <div class="selection-note">
+            🎁 You can pick ANY item from the links below. No pressure, just love! 💖
+        </div>
+
+        <div class="wishlist-links">
+            <h2>🔗 My Wish Links</h2>
+            <ul id="linksList">
+                <li><a href="https://www.amazon.in/Brave-World-Animal-Farm-1984/dp/9390575753/ref=sr_1_5?crid=14C6IBQXVN08U&dib=eyJ2IjoiMSJ9.x-AgWcgzparEt09_1Zccvunzn35hqwJoV8naRq1uUf5E74jkMtHS-xXqBlY_SoTzQezXrY3nJMobhEabyMWN88mfRrXHPBOcsVvzkFZxck5JKt2QmjYOY6Umq-dyUli9zVi7VUriZUpqkTuBXaJCcDbrF7d3pONdP1ABW1JEFiTtYP7pxV1ETB-a5Up7VPV9PMaRwWI1dcGPe_2NEl1kGHhI3IUmKl0l1ZmxQF6wsbo.GERSF2WfJ4sc9J7EmG_9zNb-k3T55iVNXd_Pg5UYA0s&dib_tag=se&keywords=1984+and+brave+new+world&qid=1733900043&s=books&sprefix=1984+and+brave+new+world%2Cstripbooks%2C188&sr=1-5" target="_blank">Brave New World, Animal Farm & 1984 (3in1) Paperback
+                    <b>Rs. 902</b>
+                </a></li>
+
+                <li><a href="https://www.amazon.in/Best-Agatha-Christie-Set-Books/dp/8119579186/ref=sr_1_2?crid=1SD7RAH04GGLU&dib=eyJ2IjoiMSJ9.S37HN9jEg_ouGJVZLzrG7eZWm21C5pm2U3JC0xiHf0gLc68kpJCmIb8p79mbcXt-fbEPsUig8IFVi3gaIhI_9pYrhWdLvGk8omJM3dzeusHxOlkE1XmDlEgRu-JtVIZbMCUZ6imev9k4gzubHDF-nCobm1H0H69HCMN4CdCR4e-uruL8J_surbvtX2Qed42VafoVmxkqnpVh4D8up-46r9ncEPnlNBjpiwLHKuUZ4SU.DT0LufxTmq_DnUJTBeOzZtD_TaKYcZetGUXZxV8X-gU&dib_tag=se&keywords=agatha+christie+set+of+books&qid=1733852911&sprefix=agatha+christie+set%2Caps%2C185&sr=8-2" target="_blank">Best of Agatha Christie (8in1) Paperback – 30 September 2024
+                    by Agatha Christie (Author)
+                    <b>Rs. 1,249</b>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflakes() {
+            const snowfall = document.getElementById('snowfall');
+            const snowflakeCount = 500;
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄️';
+                
+                // Randomize initial position
+                snowflake.style.left = `${Math.random() * 100}%`;
+                snowflake.style.top = '-10px';
+                
+                // Randomize fall speed and delay
+                const duration = Math.random() * 10 + 5; // 8-18 seconds
+                const delay = Math.random() * 10; // 0-5 seconds delay
+                
+                snowflake.style.animation = `fall ${duration}s linear ${delay}s infinite`;
+                
+                // Randomize horizontal movement
+                snowflake.style.setProperty('--translateX', `${(Math.random() - 0.5) * 100}px`);
+                
+                snowfall.appendChild(snowflake);
+            }
+        }
+
+        // Create snowflakes when page loads
+        createSnowflakes();
+    </script>
+
+    <style>
+        @keyframes fall {
+            to {
+                transform: 
+                    translateY(100vh) 
+                    translateX(var(--translateX, 0));
+            }
+        }
+    </style>
+</body>
+</html>

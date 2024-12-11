@@ -5,6 +5,31 @@
     <meta charset="UTF-8">
     <title>My Christmas Wishlist</title>
     <style>
+        .random-pulse {
+            animation: randomPulse linear infinite;
+        }
+
+        @keyframes randomPulse {
+            0%, 100% { 
+                transform: scale(1);
+            }
+            50% { 
+                transform: scale(var(--random-scale));
+            }
+        }
+
+        /* List styling for demonstration */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            transition: all 0.3s ease;
+        }
         body {
             font-family: 'Arial', sans-serif;
             background-color: #1A5F7A;
@@ -23,7 +48,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 30px;
-            max-width: 700px;
+            max-width: 810px;
             border: 3px solid #DC143C;
             box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
             width: 90%;
@@ -61,7 +86,7 @@
         }
 
         .wishlist-links h2 {
-            color: #DC143C;
+            color: #48e49f;
             margin-bottom: 15px;
         }
 
@@ -72,7 +97,7 @@
         }
 
         #linksList li {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #1A5F7A;
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
@@ -86,7 +111,7 @@
         }
 
         #linksList li a:hover {
-            color: #DC143C;
+            color: #48e49f;
             text-decoration: underline;
         }
 
@@ -148,7 +173,7 @@
             text-align: center;
             white-space: nowrap;
             overflow: hidden;
-            position: absolute;
+            position: fixed;
             z-index: 1;
             margin: -15px 0 0 0;
             padding: 0;
@@ -371,7 +396,7 @@
     </ul>
     <div id="snowfall"></div>
     <div class="container">
-        <h1>🎄 My Wishful Holiday Shopping List 🎁</h1>
+        <h1>🎄 Dear Santa, Your reindeer don't just fly - they carry the dreams of millions. 🎁</h1>
         <div class="message">
             <p>
                 This page contains a few online shopping items that I've been wishing for.
@@ -389,26 +414,26 @@
         </div>
 
         <div class="wishlist-links">
-            <h2>🔗 My Wish Links</h2>
+            <h2>My Wish Links</h2>
             <ul id="linksList">
-                <li><a href="https://www.amazon.in/Brave-World-Animal-Farm-1984/dp/9390575753/ref=sr_1_5?crid=14C6IBQXVN08U&dib=eyJ2IjoiMSJ9.x-AgWcgzparEt09_1Zccvunzn35hqwJoV8naRq1uUf5E74jkMtHS-xXqBlY_SoTzQezXrY3nJMobhEabyMWN88mfRrXHPBOcsVvzkFZxck5JKt2QmjYOY6Umq-dyUli9zVi7VUriZUpqkTuBXaJCcDbrF7d3pONdP1ABW1JEFiTtYP7pxV1ETB-a5Up7VPV9PMaRwWI1dcGPe_2NEl1kGHhI3IUmKl0l1ZmxQF6wsbo.GERSF2WfJ4sc9J7EmG_9zNb-k3T55iVNXd_Pg5UYA0s&dib_tag=se&keywords=1984+and+brave+new+world&qid=1733900043&s=books&sprefix=1984+and+brave+new+world%2Cstripbooks%2C188&sr=1-5"
+                <li class="random-pulse">🔗 <a href="https://www.amazon.in/Brave-World-Animal-Farm-1984/dp/9390575753/ref=sr_1_5?crid=14C6IBQXVN08U&dib=eyJ2IjoiMSJ9.x-AgWcgzparEt09_1Zccvunzn35hqwJoV8naRq1uUf5E74jkMtHS-xXqBlY_SoTzQezXrY3nJMobhEabyMWN88mfRrXHPBOcsVvzkFZxck5JKt2QmjYOY6Umq-dyUli9zVi7VUriZUpqkTuBXaJCcDbrF7d3pONdP1ABW1JEFiTtYP7pxV1ETB-a5Up7VPV9PMaRwWI1dcGPe_2NEl1kGHhI3IUmKl0l1ZmxQF6wsbo.GERSF2WfJ4sc9J7EmG_9zNb-k3T55iVNXd_Pg5UYA0s&dib_tag=se&keywords=1984+and+brave+new+world&qid=1733900043&s=books&sprefix=1984+and+brave+new+world%2Cstripbooks%2C188&sr=1-5"
                         target="_blank">Brave New World, Animal Farm & 1984 (3in1) Paperback
                         <b>Rs. 902</b>
                     </a></li>
-                <li><a href="https://www.amazon.in/Jules-Venre-Classic-Collection/dp/8119172329/ref=sr_1_3?dib=eyJ2IjoiMSJ9.VO5Htm4jl6A2WKT5gt19zYEJdi-CNVkmA7FI2ke0GxJhY_pXzhaNQ1Iuh8u1nZd3uQBnpyc1fHikqBRZkhb5QfoTaKBv-J0eNItvPyAiTc7_Gm5WAZCuRmZluETPq8nbjgNjDotpYMDYR4FY671WL-punjTuMUikypU4eAz_wyqHQMVHK0Y1rl1_sMgHSFk9KDU0qbaSbCmCpkC2VqSAR04rQwLNZ_ZohOM9UXHi-M8.pzBwE-RK44jirSKaqwn8jTImswr--ocfnORPPqFre2g&dib_tag=se&keywords=Jules+Verne+books&qid=1733906202&s=books&sr=1-3"
+                <li class="random-pulse">🔗 <a href="https://www.amazon.in/Jules-Venre-Classic-Collection/dp/8119172329/ref=sr_1_3?dib=eyJ2IjoiMSJ9.VO5Htm4jl6A2WKT5gt19zYEJdi-CNVkmA7FI2ke0GxJhY_pXzhaNQ1Iuh8u1nZd3uQBnpyc1fHikqBRZkhb5QfoTaKBv-J0eNItvPyAiTc7_Gm5WAZCuRmZluETPq8nbjgNjDotpYMDYR4FY671WL-punjTuMUikypU4eAz_wyqHQMVHK0Y1rl1_sMgHSFk9KDU0qbaSbCmCpkC2VqSAR04rQwLNZ_ZohOM9UXHi-M8.pzBwE-RK44jirSKaqwn8jTImswr--ocfnORPPqFre2g&dib_tag=se&keywords=Jules+Verne+books&qid=1733906202&s=books&sr=1-3"
                         target="_blank">Jules Verne Classic Collection(7in1) Paperback
                         <b>Rs. 999</b>
                     </a></li>
 
-                <li><a href="https://www.amazon.in/Greatest-Works-Jules-Deluxe-Hardbound/dp/B0CKFWF11F/ref=sr_1_17?dib=eyJ2IjoiMSJ9.YlniTGmf5SYUr1zUkbm6eMjVYLR66KeN24YtZk1ep4TjU2Mai_Azab_CznjMANLRX4WMUPSjMKRQycd4UanS0EohuDy08RKAD5Rx-Z95He7H7rLbZXmC0csv5FFq2X6bHdzUx93AMALdappsRp_7cUsD_nqiGncfkp-hpbqvltwCafa64RwE-szSPfrJHN-rMiy1OM_sWNQpNXdrnRgakGRzTGRYd99l1Bdj5ntHyZY.p9GxiHjYd9QsuGbGS_ZaGWDcKRC4al2Hj15nXxwNbAM&dib_tag=se&keywords=Jules+Verne+books&qid=1733906233&refinements=p_n_binding_browse-bin%3A9839915031&rnid=1318374031&s=books&sr=1-17"
+                <li class="random-pulse">🔗 <a href="https://www.amazon.in/Greatest-Works-Jules-Deluxe-Hardbound/dp/B0CKFWF11F/ref=sr_1_17?dib=eyJ2IjoiMSJ9.YlniTGmf5SYUr1zUkbm6eMjVYLR66KeN24YtZk1ep4TjU2Mai_Azab_CznjMANLRX4WMUPSjMKRQycd4UanS0EohuDy08RKAD5Rx-Z95He7H7rLbZXmC0csv5FFq2X6bHdzUx93AMALdappsRp_7cUsD_nqiGncfkp-hpbqvltwCafa64RwE-szSPfrJHN-rMiy1OM_sWNQpNXdrnRgakGRzTGRYd99l1Bdj5ntHyZY.p9GxiHjYd9QsuGbGS_ZaGWDcKRC4al2Hj15nXxwNbAM&dib_tag=se&keywords=Jules+Verne+books&qid=1733906233&refinements=p_n_binding_browse-bin%3A9839915031&rnid=1318374031&s=books&sr=1-17"
                         target="_blank">The Greatest Works of Jules Verne & H.G. Wells - Deluxe Hardbound Edition
                         <b>Rs. 1,206</b>
                     </a></li>
-                <li><a href="https://www.amazon.in/Greatest-Works-Jules-Deluxe-Hardbound/dp/B0CKFWF11F/ref=sr_1_17?dib=eyJ2IjoiMSJ9.YlniTGmf5SYUr1zUkbm6eMjVYLR66KeN24YtZk1ep4TjU2Mai_Azab_CznjMANLRX4WMUPSjMKRQycd4UanS0EohuDy08RKAD5Rx-Z95He7H7rLbZXmC0csv5FFq2X6bHdzUx93AMALdappsRp_7cUsD_nqiGncfkp-hpbqvltwCafa64RwE-szSPfrJHN-rMiy1OM_sWNQpNXdrnRgakGRzTGRYd99l1Bdj5ntHyZY.p9GxiHjYd9QsuGbGS_ZaGWDcKRC4al2Hj15nXxwNbAM&dib_tag=se&keywords=Jules+Verne+books&qid=1733906233&refinements=p_n_binding_browse-bin%3A9839915031&rnid=1318374031&s=books&sr=1-17"
+                <li class="random-pulse">🔗 <a href="https://www.amazon.in/Greatest-Works-Jules-Deluxe-Hardbound/dp/B0CKFWF11F/ref=sr_1_17?dib=eyJ2IjoiMSJ9.YlniTGmf5SYUr1zUkbm6eMjVYLR66KeN24YtZk1ep4TjU2Mai_Azab_CznjMANLRX4WMUPSjMKRQycd4UanS0EohuDy08RKAD5Rx-Z95He7H7rLbZXmC0csv5FFq2X6bHdzUx93AMALdappsRp_7cUsD_nqiGncfkp-hpbqvltwCafa64RwE-szSPfrJHN-rMiy1OM_sWNQpNXdrnRgakGRzTGRYd99l1Bdj5ntHyZY.p9GxiHjYd9QsuGbGS_ZaGWDcKRC4al2Hj15nXxwNbAM&dib_tag=se&keywords=Jules+Verne+books&qid=1733906233&refinements=p_n_binding_browse-bin%3A9839915031&rnid=1318374031&s=books&sr=1-17"
                         target="_blank">The Classic H. G. Wells (8in1)
                         <b>Rs. 1,235</b>
                     </a></li>
-                <li><a href="https://www.amazon.in/Best-Agatha-Christie-Set-Books/dp/8119579186/ref=sr_1_2?crid=1SD7RAH04GGLU&dib=eyJ2IjoiMSJ9.S37HN9jEg_ouGJVZLzrG7eZWm21C5pm2U3JC0xiHf0gLc68kpJCmIb8p79mbcXt-fbEPsUig8IFVi3gaIhI_9pYrhWdLvGk8omJM3dzeusHxOlkE1XmDlEgRu-JtVIZbMCUZ6imev9k4gzubHDF-nCobm1H0H69HCMN4CdCR4e-uruL8J_surbvtX2Qed42VafoVmxkqnpVh4D8up-46r9ncEPnlNBjpiwLHKuUZ4SU.DT0LufxTmq_DnUJTBeOzZtD_TaKYcZetGUXZxV8X-gU&dib_tag=se&keywords=agatha+christie+set+of+books&qid=1733852911&sprefix=agatha+christie+set%2Caps%2C185&sr=8-2"
+                <li class="random-pulse">🔗 <a href="https://www.amazon.in/Best-Agatha-Christie-Set-Books/dp/8119579186/ref=sr_1_2?crid=1SD7RAH04GGLU&dib=eyJ2IjoiMSJ9.S37HN9jEg_ouGJVZLzrG7eZWm21C5pm2U3JC0xiHf0gLc68kpJCmIb8p79mbcXt-fbEPsUig8IFVi3gaIhI_9pYrhWdLvGk8omJM3dzeusHxOlkE1XmDlEgRu-JtVIZbMCUZ6imev9k4gzubHDF-nCobm1H0H69HCMN4CdCR4e-uruL8J_surbvtX2Qed42VafoVmxkqnpVh4D8up-46r9ncEPnlNBjpiwLHKuUZ4SU.DT0LufxTmq_DnUJTBeOzZtD_TaKYcZetGUXZxV8X-gU&dib_tag=se&keywords=agatha+christie+set+of+books&qid=1733852911&sprefix=agatha+christie+set%2Caps%2C185&sr=8-2"
                         target="_blank">Best of Agatha Christie (8in1) Paperback – 30 September 2024
                         by Agatha Christie (Author)
                         <b>Rs. 1,249</b>
@@ -439,6 +464,30 @@
 
         // Create snowflakes when page loads
         createSnowflakes();
+
+
+        // Function to set random animation properties for each list item
+        function setRandomAnimations() {
+            const randomPulseItems = document.querySelectorAll('.random-pulse');
+            
+            randomPulseItems.forEach(item => {
+                // Random scale between 0.5 and 1.5
+                const randomScale = Math.min(1.1, 1 + Math.random());
+                
+                // Random animation duration between 1 and 3 seconds
+                const randomDuration = 2.5 + Math.random() * 2;
+                
+                item.style.setProperty('--random-scale', randomScale);
+                item.style.setProperty('opacity', randomScale/1.5);
+                item.style.animationDuration = `${randomDuration}s`;
+            });
+        }
+
+        // Set initial random animations
+        setRandomAnimations();
+
+        // Optionally, reset animations periodically
+        setInterval(setRandomAnimations, 5000);
     </script>
 
     <style>

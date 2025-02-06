@@ -452,5 +452,13 @@
       </footer>
     </section>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      window.addEventListener('beforeunload', (event) => {
+        console.trace('Page unload detected');
+        if (window.location.search.includes('?page=2')) {
+          debugger;
+        }
+      });
+    </script>
   </body>
 </html>

@@ -460,12 +460,24 @@
           debugger;
         }
       });
+      function getParaElement(innerHTML) {
+        const notificationMsg = document.createElement('p');
+        notificationMsg.className = 'notification-msg';
+        notificationMsg.innerHTML = innerHTML;
+
+        // To add it to the document, you'll need to append it to a parent element
+        // For example, to add it to the body:
+        document.body.appendChild(notificationMsg);
+
+        // Or to add it to a specific element by ID:
+        // document.getElementById('yourContainerId').appendChild(notificationMsg);
+      }
       window.VWO = window.VWO || [];
       window.VWO.push(['onSurveyShown', function (data) {
         // Custom functionality when the survey is shown
         const mainContainer = document.querySelector('body > main');
         if (mainContainer && data && data.uuid) {
-          mainContainer.prepend('<p class="notification-msg">Hi Dear ' + data.uuid + '😃, </p>');
+          mainContainer.prepend(getParaElement('Hi Dear ' + data.uuid + ', '));
         }
         debugger;
       }]);

@@ -65,7 +65,7 @@ h1 {
   padding: 5px;
   text-align: center;
   color: blueviolet;
-  animation: fade_in_2 3s cubic-bezier(.14,.18,.16,1.02) infinite;
+  animation: fade_in_2 3s cubic-bezier(.14,.18,.16,1.02) 4s;
 }
 
 

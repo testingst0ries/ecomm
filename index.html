@@ -463,7 +463,7 @@
       function getParaElement(innerHTML) {
         const notificationMsg = document.createElement('p');
         notificationMsg.className = 'notification-msg';
-        notificationMsg.innerHTML = innerHTML;
+        notificationMsg.innerHTML = innerHTML + '😃';
         return notificationMsg;
       }
       window.VWO = window.VWO || [];
@@ -473,7 +473,6 @@
         if (mainContainer && data && data.uuid) {
           mainContainer.prepend(getParaElement('Hi Dear ' + data.uuid + ', '));
         }
-        debugger;
       }]);
     </script>
   </body>

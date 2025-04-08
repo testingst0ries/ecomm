@@ -464,13 +464,7 @@
         const notificationMsg = document.createElement('p');
         notificationMsg.className = 'notification-msg';
         notificationMsg.innerHTML = innerHTML;
-
-        // To add it to the document, you'll need to append it to a parent element
-        // For example, to add it to the body:
-        document.body.appendChild(notificationMsg);
-
-        // Or to add it to a specific element by ID:
-        // document.getElementById('yourContainerId').appendChild(notificationMsg);
+        return notificationMsg;
       }
       window.VWO = window.VWO || [];
       window.VWO.push(['onSurveyShown', function (data) {

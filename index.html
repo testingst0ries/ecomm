@@ -460,6 +460,12 @@
           debugger;
         }
       });
+      window.VWO = window.VWO || [];
+      window.VWO.push(['onSurveyShown', function (data) {
+        // Custom functionality when the survey is shown
+        console.log('data', data);
+        debugger;
+      }]);
     </script>
   </body>
 </html>

@@ -463,7 +463,10 @@
       window.VWO = window.VWO || [];
       window.VWO.push(['onSurveyShown', function (data) {
         // Custom functionality when the survey is shown
-        console.log('data', data);
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer && data && data.uuid) {
+          mainContainer.prepend('<p class="notification-msg">Hi Dear ' + data.uuid + '😃, </p>');
+        }
         debugger;
       }]);
     </script>

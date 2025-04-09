@@ -474,6 +474,36 @@
           mainContainer.prepend(getParaElement('Hi Dear ' + data.uuid + ', '));
         }
       }]);
+      window.VWO.push(['onSurveyCompleted', function (data) {
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyCompleted'));
+        }
+      }]);
+      window.VWO.push(['onSurveyAnswerSubmitted', function (data) {
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
+        }
+      }]);
+      window.VWO.push(['setThankyouTimeout', function (data) {
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('setThankyouTimeout'));
+        }
+      }]);
+      window.VWO.push(['onSurveyClosed', function (data) {
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyClosed'));
+        }
+      }]);
+      window.VWO.push(['onSurveyMinimized', function (data) {
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyMinimized'));
+        }
+      }]);
     </script>
   </body>
 </html>

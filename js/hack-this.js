@@ -1,0 +1,1 @@
+document.body.innerHTML = '<p style="color: white;font-size: xx-large;transform: scale(7.5) translate(120px, 20px);width: min-content;background: radial-gradient(circle,rgba(235, 136, 136, 1) 1%, rgba(188, 178, 214, 1) 49%, rgba(250, 0, 0, 1) 100%);">HACKED</p>'

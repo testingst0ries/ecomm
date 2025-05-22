@@ -467,7 +467,7 @@
     </section>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      const localDebug = Boolean(window.localStorage.getItem('testing-debug-survey') || '0');
+      const localDebug = Boolean(Number(window.localStorage.getItem('testing-debug-survey') || '0'));
       window.addEventListener('beforeunload', (event) => {
         const searchStr = window.localStorage.getItem('vwodebug--stop-redirection-at') || '';
         if (searchStr && searchStr.length && window.location.search.includes(searchStr)) {

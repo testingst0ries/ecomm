@@ -467,6 +467,7 @@
     </section>
     <script src="js/bootstrap.min.js"></script>
     <script>
+      const localDebug = Boolean(window.localStorage.getItem('testing-debug-survey') || '0');
       window.addEventListener('beforeunload', (event) => {
         const searchStr = window.localStorage.getItem('vwodebug--stop-redirection-at') || '';
         if (searchStr && searchStr.length && window.location.search.includes(searchStr)) {
@@ -482,6 +483,7 @@
       }
       window.VWO = window.VWO || [];
       window.VWO.push(['onSurveyShown', function (data) {
+        if (localDebug) debugger;
         // Custom functionality when the survey is shown
         const mainContainer = document.querySelector('body > main');
         if (mainContainer && data && data.uuid) {
@@ -489,30 +491,35 @@
         }
       }]);
       window.VWO.push(['onSurveyCompleted', function (data) {
+        if (localDebug) debugger;
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyCompleted'));
         }
       }]);
       window.VWO.push(['onSurveyAnswerSubmitted', function (data) {
+        if (localDebug) debugger;
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
         }
       }]);
       window.VWO.push(['setThankyouTimeout', function (data) {
+        if (localDebug) debugger;
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('setThankyouTimeout'));
         }
       }]);
       window.VWO.push(['onSurveyClosed', function (data) {
+        if (localDebug) debugger;
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyClosed'));
         }
       }]);
       window.VWO.push(['onSurveyMinimized', function (data) {
+        if (localDebug) debugger;
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyMinimized'));

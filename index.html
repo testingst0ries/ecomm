@@ -482,7 +482,14 @@
         return notificationMsg;
       }
       window.VWO = window.VWO || [];
-      window.VWO.push(['onSurveyMinimized',  (data) => {
+      // window.VWO.push(['onSurveyMinimized',  (data) => {
+      //   if (localDebug) debugger; else console.log('onSurveyMinimized', data);
+      //   const mainContainer = document.querySelector('body > main');
+      //   if (mainContainer) {
+      //     mainContainer.prepend(getParaElement('onSurveyMinimized'));
+      //   }
+      // }]);
+      window.VWO.push(['onSurveyAnswerSubmitted',  (data) => {
         if (localDebug) debugger; else console.log('onSurveyMinimized', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {

@@ -501,7 +501,7 @@
         // Custom functionality when the survey is shown
         const mainContainer = document.querySelector('body > main');
         if (mainContainer && data && data.uuid) {
-          mainContainer.prepend(getParaElement('Hi Dear ' + data.uuid + ', '));
+          mainContainer.prepend(getParaElement('onSurveyShown: Hi Dear ' + data.uuid + ', '));
         }
       }]);
       /* window.VWO.push(['onSurveyCompleted', function (data) {

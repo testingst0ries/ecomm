@@ -482,13 +482,6 @@
         return notificationMsg;
       }
       window.VWO = window.VWO || [];
-      window.VWO.push(['onSurveyMinimized',  (data) => {
-        if (localDebug) debugger; else console.log('onSurveyMinimized', data);
-        const mainContainer = document.querySelector('body > main');
-        if (mainContainer) {
-          mainContainer.prepend(getParaElement('onSurveyMinimized'));
-        }
-      }]);
       window.VWO.push(['onSurveyShown', function (data) {
         if (localDebug) debugger; else console.log('onSurveyShown', data);
         // Custom functionality when the survey is shown
@@ -523,6 +516,13 @@
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyClosed'));
+        }
+      }]);
+      window.VWO.push(['onSurveyMinimized',  (data) => {
+        if (localDebug) debugger; else console.log('onSurveyMinimized', data);
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyMinimized'));
         }
       }]);
     </script>

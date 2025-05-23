@@ -494,44 +494,37 @@
         // Custom functionality when the survey is shown
         const mainContainer = document.querySelector('body > main');
         if (mainContainer && data && data.uuid) {
-          mainContainer.prepend(getParaElement('onSurveyShown: Hi Dear ' + data.uuid + ', '));
+          mainContainer.prepend(getParaElement('Hi Dear ' + data.uuid + ', '));
         }
       }]);
-      window.VWO.push(['onSurveyAnswerSubmitted',  (data) => {
-        if (localDebug) debugger; else console.log('onSurveyMinimized', data);
-        const mainContainer = document.querySelector('body > main');
-        if (mainContainer) {
-          mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
-        }
-      }]);
-      /* window.VWO.push(['onSurveyCompleted', function (data) {
+      window.VWO.push(['onSurveyCompleted', function (data) {
         if (localDebug) debugger; else console.log('onSurveyCompleted', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyCompleted'));
         }
-      }]); */
-      /* window.VWO.push(['onSurveyAnswerSubmitted', function (data) {
+      }]);
+      window.VWO.push(['onSurveyAnswerSubmitted', function (data) {
         if (localDebug) debugger; else console.log('onSurveyAnswerSubmitted', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
         }
-      }]); */
-      /* window.VWO.push(['setThankyouTimeout', function (data) {
+      }]);
+      window.VWO.push(['setThankyouTimeout', function (data) {
         if (localDebug) debugger; else console.log('setThankyouTimeout', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('setThankyouTimeout'));
         }
-      }]); */
-      /* window.VWO.push(['onSurveyClosed', function (data) {
+      }]);
+      window.VWO.push(['onSurveyClosed', function (data) {
         if (localDebug) debugger; else console.log('onSurveyClosed', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
           mainContainer.prepend(getParaElement('onSurveyClosed'));
         }
-      }]); */
+      }]);
     </script>
   </body>
 </html>

@@ -493,7 +493,7 @@
         if (localDebug) debugger; else console.log('onSurveyMinimized', data);
         const mainContainer = document.querySelector('body > main');
         if (mainContainer) {
-          mainContainer.prepend(getParaElement('onSurveyMinimized'));
+          mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
         }
       }]);
       window.VWO.push(['onSurveyShown', function (data) {

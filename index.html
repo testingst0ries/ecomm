@@ -489,19 +489,19 @@
       //     mainContainer.prepend(getParaElement('onSurveyMinimized'));
       //   }
       // }]);
-      window.VWO.push(['onSurveyAnswerSubmitted',  (data) => {
-        if (localDebug) debugger; else console.log('onSurveyMinimized', data);
-        const mainContainer = document.querySelector('body > main');
-        if (mainContainer) {
-          mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
-        }
-      }]);
       window.VWO.push(['onSurveyShown', function (data) {
         if (localDebug) debugger; else console.log('onSurveyShown', data);
         // Custom functionality when the survey is shown
         const mainContainer = document.querySelector('body > main');
         if (mainContainer && data && data.uuid) {
           mainContainer.prepend(getParaElement('onSurveyShown: Hi Dear ' + data.uuid + ', '));
+        }
+      }]);
+      window.VWO.push(['onSurveyAnswerSubmitted',  (data) => {
+        if (localDebug) debugger; else console.log('onSurveyMinimized', data);
+        const mainContainer = document.querySelector('body > main');
+        if (mainContainer) {
+          mainContainer.prepend(getParaElement('onSurveyAnswerSubmitted'));
         }
       }]);
       /* window.VWO.push(['onSurveyCompleted', function (data) {

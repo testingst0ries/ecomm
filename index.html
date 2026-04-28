@@ -529,6 +529,11 @@
           mainContainer.prepend(getParaElement('onSurveyMinimized'));
         }
       }]);
+      VWO.event = VWO.event || function () {VWO.push(["event"].concat([].slice.call(arguments)))};
+      VWO.event("abTastyCampaign", {
+        "campaignName": "test1",
+        "variationName": "1"
+      });
     </script>
   </body>
 </html>

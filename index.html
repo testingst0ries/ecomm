@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seasons Clothing Co. | Red Edit</title>
+    <title>Seasons Clothing Co.</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,668 +31,7 @@
         return account_id;
       }
     </script>
-    <style>
-      :root {
-        --vf-red: #e60000;
-        --vf-ink: #25282b;
-        --vf-body: #7e7e7e;
-        --vf-mute: #bebebe;
-        --vf-canvas: #ffffff;
-        --vf-canvas-soft: #f2f2f2;
-        --vf-on-dark: #ffffff;
-        --vf-gutter: clamp(20px, 4vw, 32px);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-        color: var(--vf-ink);
-        background: var(--vf-canvas);
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .container-fluid {
-        width: min(1400px, calc(100% - (var(--vf-gutter) * 2)));
-        margin: 0 auto;
-        padding: 0;
-      }
-
-      .site-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: rgba(37, 40, 43, 0.94);
-        backdrop-filter: blur(10px);
-      }
-
-      .site-nav .navbar {
-        padding: 18px 0;
-      }
-
-      .nav-shell {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .brand-mark {
-        display: inline-flex;
-        align-items: center;
-        gap: 14px;
-        color: var(--vf-on-dark);
-      }
-
-      .brand-orb {
-        width: 48px;
-        height: 48px;
-        border-radius: 6px;
-        background: var(--vf-red);
-        display: grid;
-        place-items: center;
-        flex-shrink: 0;
-      }
-
-      .brand-glyph {
-        color: var(--vf-on-dark);
-        font-size: 42px;
-        line-height: 1;
-        font-weight: 800;
-        transform: translateY(-2px);
-      }
-
-      .brand-copy {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-      }
-
-      .brand-copy strong {
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-      }
-
-      .brand-copy small {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        opacity: 0.8;
-      }
-
-      .nav-toggle {
-        border: 0;
-        padding: 0;
-        box-shadow: none !important;
-      }
-
-      .nav-toggle .navbar-toggler-icon {
-        filter: invert(1);
-      }
-
-      .nav-links-wrap {
-        justify-content: flex-end;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .nav-links .nav-link {
-        color: rgba(255, 255, 255, 0.82);
-        font-size: 16px;
-        line-height: 20px;
-        padding: 10px 14px !important;
-        border-radius: 999px;
-        transition: color 0.2s ease, background 0.2s ease;
-      }
-
-      .nav-links .nav-link:hover,
-      .nav-links .nav-link:focus,
-      .nav-links .nav-link.active {
-        color: var(--vf-on-dark);
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      .account-link {
-        border: 1px solid rgba(255, 255, 255, 0.24);
-      }
-
-      .account-swap {
-        margin-left: 8px;
-        color: rgba(230, 0, 0, 0.72);
-        display: inline-block;
-        transform: scale(1.25) rotate(-8deg);
-      }
-
-      main {
-        display: block;
-      }
-
-      .hero-band {
-        position: relative;
-        min-height: 100vh;
-        padding: 132px 0 72px;
-        background:
-          linear-gradient(90deg, rgba(37, 40, 43, 0.94) 0%, rgba(37, 40, 43, 0.78) 46%, rgba(37, 40, 43, 0.64) 100%),
-          url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80")
-            center/cover no-repeat;
-        color: var(--vf-on-dark);
-        display: flex;
-        align-items: flex-end;
-      }
-
-      .hero-inner {
-        display: grid;
-        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
-        gap: 28px;
-        align-items: end;
-      }
-
-      .eyebrow {
-        margin: 0 0 18px;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .text-ink {
-        color: var(--vf-ink);
-      }
-
-      .hero-copy h1 {
-        margin: 0;
-        font-size: clamp(72px, 15vw, 144px);
-        line-height: 0.82;
-        font-weight: 800;
-        letter-spacing: -1px;
-        text-transform: uppercase;
-        max-width: 7ch;
-      }
-
-      .hero-text {
-        max-width: 620px;
-        margin: 28px 0 0;
-        font-size: clamp(18px, 2vw, 22px);
-        line-height: 1.45;
-        color: rgba(255, 255, 255, 0.82);
-      }
-
-      .hero-actions,
-      .hero-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .hero-actions {
-        margin-top: 28px;
-      }
-
-      .hero-chips {
-        margin-top: 24px;
-      }
-
-      .cta-primary,
-      .cta-outline-red,
-      .cta-outline-dark {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        min-height: 52px;
-        padding: 12px 24px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 400;
-        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-      }
-
-      .cta-primary:hover,
-      .cta-outline-red:hover,
-      .cta-outline-dark:hover {
-        transform: translateY(-1px);
-      }
-
-      .cta-primary {
-        background: var(--vf-red);
-        color: var(--vf-on-dark);
-        border-color: var(--vf-red);
-      }
-
-      .cta-outline-red {
-        background: transparent;
-        color: var(--vf-on-dark);
-        border-color: rgba(255, 255, 255, 0.7);
-      }
-
-      .cta-outline-dark {
-        background: var(--vf-canvas);
-        color: var(--vf-ink);
-        border-color: var(--vf-ink);
-      }
-
-      .cta-small {
-        min-height: 44px;
-        padding: 8px 18px;
-        font-size: 16px;
-        line-height: 20px;
-      }
-
-      .chip {
-        display: inline-flex;
-        align-items: center;
-        min-height: 32px;
-        padding: 4px 12px;
-        border-radius: 999px;
-        background: var(--vf-canvas-soft);
-        color: var(--vf-ink);
-        font-size: 14px;
-        line-height: 21px;
-        font-weight: 700;
-      }
-
-      .hero-card {
-        background: rgba(255, 255, 255, 0.98);
-        color: var(--vf-ink);
-        border-radius: 6px;
-        padding: 20px;
-      }
-
-      .hero-card h2 {
-        margin: 14px 0 10px;
-        font-size: clamp(28px, 3vw, 32px);
-        line-height: 1.15;
-        font-weight: 700;
-      }
-
-      .hero-card p {
-        margin: 0;
-        color: var(--vf-body);
-        font-size: 18px;
-        line-height: 28px;
-      }
-
-      .hero-card-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 18px;
-        margin-top: 20px;
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      .content-band {
-        padding: 72px 0;
-      }
-
-      .section-heading {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .speechmark-logo-orb {
-        width: 72px;
-        height: 72px;
-        border-radius: 6px;
-        background: var(--vf-red);
-        display: grid;
-        place-items: center;
-        color: var(--vf-on-dark);
-        font-size: 58px;
-        line-height: 1;
-        font-weight: 800;
-        flex-shrink: 0;
-      }
-
-      .display-light {
-        margin: 0;
-        font-size: clamp(36px, 5vw, 48px);
-        line-height: 1.08;
-        font-weight: 300;
-        color: var(--vf-ink);
-        max-width: 12ch;
-      }
-
-      .lead-copy {
-        max-width: 860px;
-        margin: 28px 0 0;
-        color: var(--vf-body);
-        font-size: 18px;
-        line-height: 28px;
-      }
-
-      .story-grid,
-      .product-grid,
-      .benefit-stack,
-      .footer-grid {
-        display: grid;
-        gap: 24px;
-      }
-
-      .story-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 36px;
-      }
-
-      .story-card,
-      .product-card,
-      .benefit-card {
-        background: var(--vf-canvas);
-        border: 1px solid rgba(37, 40, 43, 0.12);
-        border-radius: 6px;
-        overflow: hidden;
-      }
-
-      .story-media,
-      .product-media {
-        background: var(--vf-canvas-soft);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .story-media {
-        aspect-ratio: 16 / 9;
-        padding: 24px;
-      }
-
-      .story-media img,
-      .product-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      .story-body,
-      .product-body {
-        padding: 20px;
-      }
-
-      .story-body h3,
-      .product-body h3 {
-        margin: 14px 0 10px;
-        color: var(--vf-ink);
-      }
-
-      .story-body h3 {
-        font-size: 32px;
-        line-height: 40px;
-        font-weight: 700;
-      }
-
-      .product-body h3 {
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: 700;
-      }
-
-      .story-body p,
-      .product-body p,
-      .benefit-card p,
-      .footer-copy p,
-      .footer-list p {
-        margin: 0;
-        color: var(--vf-body);
-        font-size: 18px;
-        line-height: 28px;
-      }
-
-      .story-actions,
-      .band-header,
-      .product-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-
-      .story-actions {
-        margin-top: 24px;
-      }
-
-      .band-header {
-        margin-bottom: 32px;
-      }
-
-      .band-header .display-light {
-        max-width: none;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .product-media {
-        aspect-ratio: 4 / 3;
-        padding: 28px;
-      }
-
-      .product-price {
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: 700;
-        color: var(--vf-ink);
-      }
-
-      .feature-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-        gap: 24px;
-        align-items: start;
-      }
-
-      .benefit-stack {
-        grid-template-columns: 1fr;
-      }
-
-      .benefit-card {
-        display: grid;
-        grid-template-columns: 88px minmax(0, 1fr);
-        gap: 16px;
-        padding: 20px;
-      }
-
-      .benefit-icon {
-        width: 72px;
-        height: 72px;
-        border-radius: 6px;
-        background: var(--vf-canvas-soft);
-        display: grid;
-        place-items: center;
-      }
-
-      .benefit-icon img {
-        width: 48px;
-        height: 48px;
-        object-fit: contain;
-      }
-
-      .benefit-card h3 {
-        margin: 0 0 8px;
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: 700;
-        color: var(--vf-ink);
-      }
-
-      .footer-section {
-        background: var(--vf-ink);
-        color: var(--vf-on-dark);
-        padding: 56px 0 20px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1.3fr 1fr 1fr;
-      }
-
-      .footer-eyebrow {
-        margin: 0 0 12px;
-        font-size: 12px;
-        line-height: 16px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.72);
-      }
-
-      .footer-title {
-        margin: 0 0 16px;
-        font-size: 32px;
-        line-height: 40px;
-        font-weight: 700;
-      }
-
-      .footer-copy p,
-      .footer-list p {
-        color: rgba(255, 255, 255, 0.78);
-      }
-
-      .footer-list i,
-      .social-row i {
-        color: var(--vf-on-dark);
-        margin-right: 10px;
-      }
-
-      .social-row {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 12px;
-        font-size: 28px;
-      }
-
-      .footer-divider {
-        height: 1px;
-        background: rgba(255, 255, 255, 0.24);
-        margin: 28px 0 18px;
-      }
-
-      .footer-note {
-        margin: 0;
-        text-align: center;
-        font-size: 14px;
-        line-height: 16px;
-        color: rgba(255, 255, 255, 0.72);
-      }
-
-      .notification-msg {
-        width: min(1400px, calc(100% - (var(--vf-gutter) * 2)));
-        margin: 12px auto 0;
-        padding: 12px 16px;
-        border-left: 4px solid var(--vf-red);
-        background: #fff3f3;
-        color: var(--vf-ink);
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 700;
-      }
-
-      @media (max-width: 991.98px) {
-        .nav-links {
-          align-items: flex-start;
-          margin-top: 14px;
-          padding-bottom: 6px;
-        }
-
-        .hero-band {
-          min-height: auto;
-        }
-
-        .hero-inner,
-        .feature-layout,
-        .footer-grid,
-        .product-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-card {
-          max-width: 420px;
-        }
-
-        .band-header {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        .site-nav .navbar {
-          padding: 14px 0;
-        }
-
-        .hero-band {
-          padding-top: 118px;
-          background-position: 72% center;
-        }
-
-        .section-heading {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .story-grid,
-        .benefit-stack {
-          grid-template-columns: 1fr;
-        }
-
-        .benefit-card {
-          grid-template-columns: 1fr;
-        }
-
-        .story-actions,
-        .product-footer {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .hero-card,
-        .story-body,
-        .product-body,
-        .benefit-card {
-          padding: 18px;
-        }
-
-        .lead-copy,
-        .story-body p,
-        .product-body p,
-        .benefit-card p,
-        .footer-copy p,
-        .footer-list p {
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
@@ -729,395 +68,406 @@
     </script>
   </head>
   <body>
-    <header class="site-nav">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid nav-shell">
-          <a class="brand-mark" href="#home" aria-label="Seasons Clothing home">
-            <span class="brand-orb" aria-hidden="true">
-              <span class="brand-glyph">"</span>
-            </span>
-            <span class="brand-copy">
-              <strong>Seasons</strong>
-              <small>Red edit</small>
-            </span>
-          </a>
-          <button
-            class="navbar-toggler nav-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+    <!--Nav bar-->
+    <section class="head-section">
+      <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light penguin-nabbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="150" height="100">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff9933;stop-opacity:1" />
+                    <stop offset="25%" style="stop-color:#33cc33;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#3399ff;stop-opacity:1" />
+                    <stop offset="75%" style="stop-color:#ff3399;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff9933;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                
+                <circle cx="150" cy="100" r="80" fill="url(#grad1)" />
+                
+                <text x="150" y="105" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">Seasons</text>
+                <text x="150" y="130" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Clothing Co</text>
+              </svg>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B"
+                    class="nav-link">
+                    <span id="acc"></span>
+                    <span style="transform: scale(1.5) rotate(-6deg);display: inline-block;margin-left: 10px;color: #f11c547d;font-family: math;">↹</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#" onclick="navigateToHome(event, 'home')"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="navigateToHome(event, 'products')">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="navigateToHome(event, 'about-us')">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="navigateToHome(event, 'contact-us')">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <main>
+      <!--Banner section-->
+      <section class="head-section">
+        <div class="pt-2 pb-5 container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-6 px-3">
+              <h1 id="text-style">Buy the Sweaters</h1>
+              <h1 class="text-style2">for Every Season</h1>
+              <p>
+                Seasons Clothing Co. is back with latest styles for all seasons. Find
+                the sweaters and jackets of your choice and get 25% discount. Offer valid for 5 days only.
+              </p>
+              <button type="button" class="btn penguin-btn">
+                <i class="fa fa-shopping-cart"></i> BUY NOW
+              </button>
+            </div>
+            <div class="col-md-6 how-img px-5">
+              <img src="Images/bannar-profile.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Woman collection section-->
+      <section id="products" class="container mt-5">
+        <h1>Woman Jacket</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak1.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yellow Coat Jacket</h5>
+                <p class="card-text">
+                  Stylish yellow coat for young and beautiful ladies.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3200Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak2.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ladies Jacket</h5>
+                <p class="card-text">
+                  Jackets for casual wear in best prices and diffrent color
+                  patterns.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">2500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/woman/woman-jak3.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Woman Leather Jacket</h5>
+                <p class="card-text">
+                  Leather jackets of premium quality.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">5000Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Men collection section-->
+      <section class="container mt-5">
+        <h1 class="penguin-catagory">Woman Jacket</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak1.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Snowboard Jacket Mens</h5>
+                <p class="card-text">
+                  Snowboard jacket are ferfect match for people in moutain areas
+                  or for tourist.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak3.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Man Leather Jackets</h5>
+                <p class="card-text">
+                  Perfect bike riding jacket available with different color and
+                  sizes.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">4500Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="Images/man/man-jak2.png"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Man Casual Jackets</h5>
+                <p class="card-text">
+                  Matte Black Jacket with all sizes available.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">3000Rs</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> BUY NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Some information section-->
+      <section class="container mt-5 pt-5">
+        <div class="pt-2 pb-5 container">
+          <div
+            class="row d-flex align-items-center flex-column-reverse flex-lg-row"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse nav-links-wrap" id="navbarNav">
-            <ul class="navbar-nav ms-auto nav-links">
-              <li class="nav-item">
-                <a
-                  href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B"
-                  class="nav-link account-link"
-                >
-                  Account <span id="acc"></span>
-                  <span class="account-swap">↹</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about-us">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact-us">Contact us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main id="home">
-      <section class="hero-band">
-        <div class="container-fluid hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">Winter collection 2026</p>
-            <h1>Stay Warm</h1>
-            <p class="hero-text">
-              Seasons Clothing Co. now opens like a campaign poster: dark hero band,
-              giant uppercase display type, red pill CTAs, and a cleaner edit of
-              outerwear built for every cold-weather commute.
-            </p>
-            <div class="hero-actions">
-              <a class="cta-primary" href="#products">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                Shop the edit
-              </a>
-              <a class="cta-outline-red" href="#about-us">Why Seasons</a>
+            <div class="col-md-6 px-3">
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 12.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Find the Perfect Fit</h5>
+                      <p class="card-text">
+                        Everybody is different, which is why we offer styles for
+                        every body.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 13.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Free Exchanges</h5>
+                      <p class="card-text">
+                        One of the many reasons you can shop with peace of mind.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card mb-3 penguin-card-border shadow"
+                style="max-width: 540px;"
+              >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img
+                      src="icon/image 14.png"
+                      class="w-50 penguin-info"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title">Contact Our Seller</h5>
+                      <p class="card-text">
+                        They are here to help you. That's quite literally what
+                        we pay them for.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="hero-chips" aria-label="Highlights">
-              <span class="chip">25% off outerwear</span>
-              <span class="chip">48-hour dispatch</span>
-              <span class="chip">New-season layering</span>
+            <div class="col-md-6 how-img px-5">
+              <img src="icon/XMLID 1.png" class="img-fluid" alt="" />
             </div>
-          </div>
-
-          <aside class="hero-card" aria-label="Collection summary">
-            <span class="chip">Editor's pick</span>
-            <h2>Layered pieces with billboard impact.</h2>
-            <p>
-              Clean monochrome styling, soft neutral surfaces, and one unmistakable
-              scarlet accent give the collection a sharper campaign feel.
-            </p>
-            <div class="hero-card-meta">
-              <span>6 key styles</span>
-              <span>From 2500Rs</span>
-              <span>Men + Women</span>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="content-band intro-band">
-        <div class="container-fluid">
-          <div class="section-heading">
-            <div class="speechmark-logo-orb" aria-hidden="true">"</div>
-            <div>
-              <p class="eyebrow text-ink">Campaign story</p>
-              <h2 class="display-light">A calmer band after the headline.</h2>
-            </div>
-          </div>
-          <p class="lead-copy">
-            The redesign follows the Vodafone-inspired system closely: an ink hero,
-            clean white content bands, almost no decorative colors beyond red, and
-            oversized display typography that makes the page feel more editorial
-            than catalog-first.
-          </p>
-
-          <div class="story-grid">
-            <article class="story-card">
-              <div class="story-media">
-                <img
-                  src="Images/woman/woman-jak3.png"
-                  alt="Premium women's leather jacket"
-                />
-              </div>
-              <div class="story-body">
-                <span class="chip">Women's edit</span>
-                <h3>Sharper silhouettes for the city.</h3>
-                <p>
-                  Built around premium layers, clean cuts, and confident shapes that
-                  look bold without adding noise to the outfit.
-                </p>
-                <div class="story-actions">
-                  <span class="product-price">From 3200Rs</span>
-                  <a class="cta-primary cta-small" href="#products">View jackets</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="story-card">
-              <div class="story-media">
-                <img
-                  src="Images/man/man-jak3.png"
-                  alt="Men's leather jacket in a neutral palette"
-                />
-              </div>
-              <div class="story-body">
-                <span class="chip">Men's edit</span>
-                <h3>Dark layers with a quieter finish.</h3>
-                <p>
-                  Modern riding silhouettes and winter-ready insulation, presented in
-                  a more restrained layout that lets the product lead.
-                </p>
-                <div class="story-actions">
-                  <span class="product-price">From 3000Rs</span>
-                  <a class="cta-outline-dark cta-small" href="#products">See styles</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="products" class="content-band product-band">
-        <div class="container-fluid">
-          <div class="band-header">
-            <div>
-              <p class="eyebrow text-ink">Selected jackets</p>
-              <h2 class="display-light">The red edit for cold mornings.</h2>
-            </div>
-            <a class="cta-outline-dark" href="#contact-us">Talk to a stylist</a>
-          </div>
-
-          <div class="product-grid">
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/woman/woman-jak1.png"
-                  alt="Yellow Coat Jacket"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Women</span>
-                <h3>Yellow Coat Jacket</h3>
-                <p>
-                  A brighter outer layer for winter wardrobes, finished with a clean
-                  shape and everyday comfort.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">3200Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/woman/woman-jak2.png"
-                  alt="Ladies Jacket"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Women</span>
-                <h3>Ladies Jacket</h3>
-                <p>
-                  Casual layering with a softer profile, tailored for everyday wear
-                  and fast seasonal styling.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">2500Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/woman/woman-jak3.png"
-                  alt="Woman Leather Jacket"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Women</span>
-                <h3>Woman Leather Jacket</h3>
-                <p>
-                  Premium leather styling with a bolder finish, curated for sharper
-                  evening layering.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">5000Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/man/man-jak1.png"
-                  alt="Snowboard Jacket Mens"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Men</span>
-                <h3>Snowboard Jacket Mens</h3>
-                <p>
-                  Technical warmth for colder routes, with insulation and shape that
-                  hold up in harsher conditions.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">3500Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/man/man-jak3.png"
-                  alt="Man Leather Jackets"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Men</span>
-                <h3>Man Leather Jackets</h3>
-                <p>
-                  A riding-inspired layer with more structure, more protection, and a
-                  darker campaign-ready finish.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">4500Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-media">
-                <img
-                  src="Images/man/man-jak2.png"
-                  alt="Man Casual Jackets"
-                />
-              </div>
-              <div class="product-body">
-                <span class="chip">Men</span>
-                <h3>Man Casual Jackets</h3>
-                <p>
-                  Matte black, easy to layer, and designed to stay understated while
-                  still carrying a strong silhouette.
-                </p>
-                <div class="product-footer">
-                  <span class="product-price">3000Rs</span>
-                  <a class="cta-primary cta-small" href="#contact-us">Buy now</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about-us" class="content-band">
-        <div class="container-fluid feature-layout">
-          <div>
-            <p class="eyebrow text-ink">About Seasons</p>
-            <h2 class="display-light">Outerwear that feels considered at every layer.</h2>
-            <p class="lead-copy">
-              Changing the way you dress changes the way you feel. This version of
-              Seasons Clothing Co. leans into confidence through restraint: stronger
-              type, fewer colors, clearer choices, and product stories that let the
-              jackets feel premium before checkout.
-            </p>
-          </div>
-
-          <div class="benefit-stack">
-            <article class="benefit-card">
-              <div class="benefit-icon">
-                <img src="icon/image 12.png" alt="Fit guidance icon" />
-              </div>
-              <div>
-                <h3>Find the perfect fit</h3>
-                <p>
-                  Every collection is sized to make layering simple, whether you want
-                  a close silhouette or a roomier winter feel.
-                </p>
-              </div>
-            </article>
-
-            <article class="benefit-card">
-              <div class="benefit-icon">
-                <img src="icon/image 13.png" alt="Exchange policy icon" />
-              </div>
-              <div>
-                <h3>Free exchanges</h3>
-                <p>
-                  One of the easiest ways to shop with confidence when you are trying
-                  new seasonal shapes and fits.
-                </p>
-              </div>
-            </article>
-
-            <article class="benefit-card">
-              <div class="benefit-icon">
-                <img src="icon/image 14.png" alt="Customer support icon" />
-              </div>
-              <div>
-                <h3>Contact our seller</h3>
-                <p>
-                  A direct support channel for product advice, sizing questions, and
-                  faster purchase decisions.
-                </p>
-              </div>
-            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <section id="contact-us" class="footer-section">
-      <div class="container-fluid">
-        <div class="footer-grid">
-          <div class="footer-copy">
-            <p class="footer-eyebrow">Seasons Clothing Co.</p>
-            <h2 class="footer-title">A cleaner winter storefront.</h2>
+    <!--Footer section-->
+    <section class="footer-section">
+      <div class="container pb-5">
+        <div class="row">
+          <div id="about-us" class="col-sm pe-5 pt-3">
+            <h5 class="mb-3">Seasons Clothing Co</h5>
             <p>
-              Inspired by Vodafone's marketing rhythm: dark top band, oversized
-              display type, restrained surfaces, and red conversion points that keep
-              the experience focused.
+              Changing the way you dress will change the way you feel. When you
+              are well dressed and look good you will automatically feel better.
+              When you feel good about yourself, you are more likely to feel
+              good inside, treat others better, and have more energy.
             </p>
           </div>
-
-          <div class="footer-list">
-            <p class="footer-eyebrow">Contact us</p>
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i>123 Fashion Avenue, Styleville, 12345</p>
-            <p><i class="fa fa-envelope-open" aria-hidden="true"></i>info@seasonsclothing.com</p>
-            <p><i class="fa fa-phone" aria-hidden="true"></i>+1 (555) 987-6543</p>
+          <div id="contact-us" class="col-sm pe-5 pt-3">
+            <h5>Contact us:</h5>
+            <hr />
+            <p>
+              <i class="fa fa-map-marker fa-1x"> </i>123 Fashion Avenue, Styleville, 12345
+            </p>
+            <p>
+              <i class="fa fa-envelope-open"></i>
+              info@seasonsclothing.com
+            </p>
+            <p><i class="fa fa-phone"></i> +1 (555) 987-6543</p>
           </div>
-
-          <div class="footer-list">
-            <p class="footer-eyebrow">Get in touch</p>
-            <div class="social-row" aria-label="Social links">
-              <i class="fa fa-facebook-square" aria-hidden="true"></i>
-              <i class="fa fa-twitter-square" aria-hidden="true"></i>
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <div class="col-sm pe-5 pt-3">
+            <div>
+              <h5>Get in Touch</h5>
+              <hr />
+              <i class="fa fa-facebook-square fa-2x pe-3"> </i>
+              <i class="fa fa-twitter-square fa-2x pe-3"></i>
+              <i class="fa fa-linkedin fa-2x pe-3"></i>
             </div>
-            <p class="footer-eyebrow" style="margin-top: 28px;">Pay with</p>
-            <img src="icon/pay.png" alt="Accepted payment methods" />
+            <div class="pt-5">
+              <h5>Pay with</h5>
+              <hr />
+              <img src="icon/pay.png" class="w-75" alt="" />
+            </div>
           </div>
         </div>
-
-        <div class="footer-divider"></div>
-        <footer>
-          <p class="footer-note">© Seasons Clothing Co. 2026, all rights reserved</p>
-        </footer>
       </div>
+      <footer>
+        <hr />
+        <p class="text-center">
+          © Seasons Clothing Co. 2023, all rights reserved
+        </p>
+      </footer>
     </section>
     <script src="js/bootstrap.min.js"></script>
     <script>

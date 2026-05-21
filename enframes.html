@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Persistent Multi-Tab Iframe Loader</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header */
+    .top-bar {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      background: #f5f5f5;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-row input {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .input-row button {
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #ddd;
+      border-radius: 6px 6px 0 0;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+      min-width: fit-content;
+    }
+
+    .tab.active {
+      background: #222;
+      color: white;
+    }
+
+    .tab-title {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tab-action {
+      font-size: 13px;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .tab-action:hover {
+      opacity: 1;
+    }
+
+    /* Content */
+    .iframe-area {
+      flex: 1;
+      position: relative;
+      background: white;
+    }
+
+    .iframe-wrapper {
+      position: absolute;
+      inset: 0;
+      display: none;
+    }
+
+    .iframe-wrapper.active {
+      display: block;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .empty-state {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="top-bar">
+
+    <div class="input-row">
+      <input
+        type="text"
+        id="urlInput"
+        placeholder="Enter URL (https://example.com)"
+      />
+
+      <button id="addBtn">
+        Add Tab
+      </button>
+    </div>
+
+    <div class="tabs" id="tabsContainer"></div>
+
+  </div>
+
+  <!-- Iframe Area -->
+  <div class="iframe-area" id="iframeArea">
+
+    <div class="empty-state" id="emptyState">
+      No tabs added yet
+    </div>
+
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'persistent_iframe_tabs';
+
+    const urlInput = document.getElementById('urlInput');
+    const addBtn = document.getElementById('addBtn');
+    const tabsContainer = document.getElementById('tabsContainer');
+    const iframeArea = document.getElementById('iframeArea');
+    const emptyState = document.getElementById('emptyState');
+
+    let tabs = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+    let activeTabId = tabs[0]?.id || null;
+
+    const iframeMap = {};
+
+    function saveTabs() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(tabs));
+    }
+
+    function normalizeUrl(url) {
+
+      if (!/^https?:\/\//i.test(url)) {
+        return 'https://' + url;
+      }
+
+      return url;
+    }
+
+    function createIframe(tab) {
+
+      const wrapper = document.createElement('div');
+
+      wrapper.className = 'iframe-wrapper';
+      wrapper.dataset.id = tab.id;
+
+      const iframe = document.createElement('iframe');
+
+      iframe.src = tab.url;
+
+      wrapper.appendChild(iframe);
+
+      iframeArea.appendChild(wrapper);
+
+      iframeMap[tab.id] = wrapper;
+    }
+
+    function updateActiveIframe() {
+
+      Object.entries(iframeMap).forEach(([id, wrapper]) => {
+
+        if (Number(id) === activeTabId) {
+          wrapper.classList.add('active');
+        } else {
+          wrapper.classList.remove('active');
+        }
+      });
+    }
+
+    function renderTabs() {
+
+      tabsContainer.innerHTML = '';
+
+      if (!tabs.length) {
+
+        emptyState.style.display = 'flex';
+
+        return;
+      }
+
+      emptyState.style.display = 'none';
+
+      tabs.forEach(tab => {
+
+        const tabEl = document.createElement('div');
+
+        tabEl.className =
+          'tab' + (tab.id === activeTabId ? ' active' : '');
+
+        // TAB TITLE
+        const title = document.createElement('span');
+
+        title.className = 'tab-title';
+
+        title.textContent = tab.title;
+
+        // RENAME BUTTON
+        const renameBtn = document.createElement('span');
+
+        renameBtn.className = 'tab-action';
+
+        renameBtn.title = 'Rename';
+
+        renameBtn.textContent = '✏️';
+
+        renameBtn.addEventListener('click', (e) => {
+
+          e.stopPropagation();
+
+          const newTitle = prompt(
+            'Rename tab',
+            tab.title
+          );
+
+          if (!newTitle || !newTitle.trim()) {
+            return;
+          }
+
+          tab.title = newTitle.trim();
+
+          saveTabs();
+
+          renderTabs();
+        });
+
+        // COPY URL BUTTON
+        const copyBtn = document.createElement('span');
+
+        copyBtn.className = 'tab-action';
+
+        copyBtn.title = 'Copy URL';
+
+        copyBtn.textContent = '📋';
+
+        copyBtn.addEventListener('click', async (e) => {
+
+          e.stopPropagation();
+
+          try {
+
+            await navigator.clipboard.writeText(tab.url);
+
+            copyBtn.textContent = '✅';
+
+            setTimeout(() => {
+              copyBtn.textContent = '📋';
+            }, 1000);
+
+          } catch (err) {
+
+            alert('Failed to copy URL');
+          }
+        });
+
+        // CLOSE BUTTON
+        const closeBtn = document.createElement('span');
+
+        closeBtn.className = 'tab-action';
+
+        closeBtn.title = 'Close';
+
+        closeBtn.innerHTML = '&times;';
+
+        closeBtn.addEventListener('click', (e) => {
+
+          e.stopPropagation();
+
+          // remove iframe
+          iframeMap[tab.id]?.remove();
+
+          delete iframeMap[tab.id];
+
+          // remove tab
+          tabs = tabs.filter(t => t.id !== tab.id);
+
+          // activate another tab
+          if (activeTabId === tab.id) {
+            activeTabId = tabs[0]?.id || null;
+          }
+
+          saveTabs();
+
+          updateActiveIframe();
+
+          renderTabs();
+        });
+
+        // ACTIVATE TAB
+        tabEl.addEventListener('click', () => {
+
+          activeTabId = tab.id;
+
+          updateActiveIframe();
+
+          renderTabs();
+        });
+
+        tabEl.appendChild(title);
+        tabEl.appendChild(renameBtn);
+        tabEl.appendChild(copyBtn);
+        tabEl.appendChild(closeBtn);
+
+        tabsContainer.appendChild(tabEl);
+      });
+    }
+
+    function addTab() {
+
+      let url = urlInput.value.trim();
+
+      if (!url) {
+        alert('Please enter URL');
+        return;
+      }
+
+      url = normalizeUrl(url);
+
+      let title = url;
+
+      try {
+        title = new URL(url).hostname;
+      } catch (e) {}
+
+      const tab = {
+        id: Date.now(),
+        title,
+        url
+      };
+
+      tabs.push(tab);
+
+      activeTabId = tab.id;
+
+      saveTabs();
+
+      createIframe(tab);
+
+      updateActiveIframe();
+
+      renderTabs();
+
+      urlInput.value = '';
+    }
+
+    addBtn.addEventListener('click', addTab);
+
+    urlInput.addEventListener('keydown', (e) => {
+
+      if (e.key === 'Enter') {
+        addTab();
+      }
+    });
+
+    // Initial Load
+    tabs.forEach(createIframe);
+
+    updateActiveIframe();
+
+    renderTabs();
+  </script>
+
+</body>
+</html>
